@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Coffee Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #9e6c2f;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #674242;
+            color: rgb(11, 11, 11);
+        }
+        .checkout {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: rgb(101, 92, 92);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #020202;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #000000;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #939393;
+        }
+        input, select {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #6d5858;
+            border-radius: 5px;
+            width: 100%;
+        }
+        button {
+            padding: 10px;
+            background-color: #6f4c3e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #5a3c30;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Checkout</h1>
+    <p>Complete your order</p>
+</header>
+
+<div class="checkout">
+    <h2>Order Summary</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mccafe</td>
+                <td>11</td>
+                <td>$9.50</td>
+                <td>$104.50</td>
+            </tr>
+            <tr>
+                <td>starbucks</td>
+                <td>6</td>
+                <td>$8.50</td>
+                <td>$51.00</td>
+            </tr>
+            <tr>
+                <td>Cappuccino</td>
+                <td>5</td>
+                <td>$7.00</td>
+                <td>$35.00</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="total">
+        <p><strong>Total: $190.50</strong></p>
+    </div>
+
+    <h2>Billing Information</h2>
+    <form action="#" method="post">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="address" placeholder="Shipping Address" required>
+        <input type="text" name="city" placeholder="City" required>
+        <input type="text" name="state" placeholder="State" required>
+        <input type="text" name="zip" placeholder="Zip Code" required>
+        
+        <h2>Payment Information</h2>
+        <select name="payment-method" required>
+            <option value="">Select Payment Method</option>
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="cash">Cash on Delivery</option>
+        </select>
+        
+        <button type="submit">Place Order</button>
+    </form>
+</div>
+
+</body>
+</html>
